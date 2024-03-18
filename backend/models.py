@@ -6,9 +6,8 @@ from sqlalchemy.sql import func
 
 
 
-#arquivo 2
 
-# #TODO
+
 class User(BaseModel):
     __tablename__ = 'users'
     id = Column('id', Integer, primary_key=True, autoincrement=True)
@@ -17,5 +16,6 @@ class User(BaseModel):
     created_at = Column('created_at', DateTime, server_default=func.now())
     updated_at = Column('updated_at', DateTime, onupdate=func.now())
 
+#TODO 
 
 #arquivo 2

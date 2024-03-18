@@ -33,7 +33,7 @@ async def add_user(request:UserSchema, db: Session = Depends(get_db)):
 
 @router.get("/{user_name}", description="Listar o usuario pelo nome")
 def get_users(user_name,db: Session = Depends(get_db)):
-    user_on_db= db.query(User).filter(User.item == user_name).first()
+    user_on_db= db.query(User).filter(User.username == user_name).first()
     return user_on_db
 
 @router.get("/listar", description="Listar todos usuarios")
